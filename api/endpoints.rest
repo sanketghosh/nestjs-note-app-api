@@ -1,0 +1,64 @@
+# Health check
+http://localhost:3000
+
+###
+# Endpoint for registering an user
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name": "Jay Saha",
+    "email": "jays@mail.com",
+    "password": "JayPass@123"
+}
+
+###
+# Endpoint for user login
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "jays@mail.com",
+    "password": "JayPass@123"
+}
+
+
+###
+# Create a note
+POST http://localhost:3000/api/v1/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWh6YnZ3MnAwMDAwbGNidW52bHM1OHlmIiwiZW1haWwiOiJqYXlzQG1haWwuY29tIiwibmFtZSI6IkpheSBTYWhhIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0xNFQyMDo0NjoyOS42NjZaIiwiaWF0IjoxNzYzMjM3NzY4LCJleHAiOjE3NjMyMzgzNjh9.x2xgUXsRSkWYuJh3GYhFIaF3ELEuit6e1r1rwm88_1w
+
+{
+    "title": "Note 1",
+    "body": "This is just the body of note one."
+}
+
+###
+# fetch all notes
+GET http://localhost:3000/api/v1/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWh6YnZ3MnAwMDAwbGNidW52bHM1OHlmIiwiZW1haWwiOiJqYXlzQG1haWwuY29tIiwibmFtZSI6IkpheSBTYWhhIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0xNFQyMDo0NjoyOS42NjZaIiwiaWF0IjoxNzYzMjM3NzY4LCJleHAiOjE3NjMyMzgzNjh9.x2xgUXsRSkWYuJh3GYhFIaF3ELEuit6e1r1rwm88_1w
+
+###
+# get single note
+GET http://localhost:3000/api/v1/notes/cmi0psgvz0009lcfhxkgff5vh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWh6YnZ3MnAwMDAwbGNidW52bHM1OHlmIiwiZW1haWwiOiJqYXlzQG1haWwuY29tIiwibmFtZSI6IkpheSBTYWhhIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0xNFQyMDo0NjoyOS42NjZaIiwiaWF0IjoxNzYzMjM3NzY4LCJleHAiOjE3NjMyMzgzNjh9.x2xgUXsRSkWYuJh3GYhFIaF3ELEuit6e1r1rwm88_1w
+
+###
+# update a note note
+PATCH http://localhost:3000/api/v1/notes/cmi0psgvz0009lcfhxkgff5vh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWh6YnZ3MnAwMDAwbGNidW52bHM1OHlmIiwiZW1haWwiOiJqYXlzQG1haWwuY29tIiwibmFtZSI6IkpheSBTYWhhIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0xNFQyMDo0NjoyOS42NjZaIiwiaWF0IjoxNzYzMjM3NzY4LCJleHAiOjE3NjMyMzgzNjh9.x2xgUXsRSkWYuJh3GYhFIaF3ELEuit6e1r1rwm88_1w
+
+{
+    "title": "note 5",
+    "body": "small desc for note 5"
+}
+
+###
+# delete a note note
+DELETE http://localhost:3000/api/v1/notes/cmi0psgvz0009lcfhxkgff5vh
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWh6YnZ3MnAwMDAwbGNidW52bHM1OHlmIiwiZW1haWwiOiJqYXlzQG1haWwuY29tIiwibmFtZSI6IkpheSBTYWhhIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0xNFQyMDo0NjoyOS42NjZaIiwiaWF0IjoxNzYzMjM3NzY4LCJleHAiOjE3NjMyMzgzNjh9.x2xgUXsRSkWYuJh3GYhFIaF3ELEuit6e1r1rwm88_1w
